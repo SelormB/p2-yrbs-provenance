@@ -13,7 +13,7 @@
 | Presenting author | Selorm Buaka | — |
 
 ## Monitoring
-- A scheduled check of csteconference.org for the 2027 call is to be set up (see STATUS).
+- A weekly scheduled check (Mondays 8:47 MT) looks for the 2027 call.
 - When the call posts, the abstract requirements here will be replaced with the official ones.
 
 ## Abstract

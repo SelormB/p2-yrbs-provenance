@@ -59,7 +59,7 @@ Legend:
 
 ## TO BUILD NEXT (no blocker)
 - BRFSS arm: acquisition script for LLCP2023 and LLCP23V1, ACE-module provenance classes, cohort.
-- Scheduled monitoring of the CSTE 2027 call.
+- (moved) CSTE 2027 monitoring: COMPLETE — weekly scheduled check, Mondays 8:47 MT.
 - GitHub repository push. Needs a token or the author's push; see the publish guide when it is ready.
 
 ## VERIFIED
