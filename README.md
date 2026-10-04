@@ -46,6 +46,7 @@ Each stage reads and writes files only, so stages can be rerun one at a time.
 | `06_describe.py` | Design-based prevalence, cohort flow | `tables/T_prevalence.csv`, `T_flow__*.csv` |
 | `07_fit_task.py --task-id N` | Fit all methods and evaluate one (outcome, scenario) pair | `results/preds/`, `results/metrics/` |
 | `08_report.py` | Figures, tables, `stats.json` | `figures/F1–F4`, `tables/T2–T4`, `results/stats.json` |
+| `00_acquire_brfss.sh` + `python -m p2prov.cli brfss --raw data/raw/brfss` | BRFSS ACE contrasting testbed | `results/brfss/` |
 
 `python -m p2prov.cli list-tasks` prints the 26 (outcome, scenario) pairs.
 

@@ -13,7 +13,7 @@ from .scenarios import task_list
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="p2prov")
     ap.add_argument("stage", choices=["resolve", "ingest", "audit", "provenance", "splits", "describe",
-                                      "fit", "evaluate", "task", "all", "report", "list-tasks"])
+                                      "fit", "evaluate", "task", "all", "report", "list-tasks", "brfss"])
     ap.add_argument("--raw", default="data/raw", help="directory with CDC files")
     ap.add_argument("--out", default=".", help="output root (results/, tables/, figures/ ...)")
     ap.add_argument("--synthetic", action="store_true", help="fixture mode; outputs stamped SYNTHETIC")
@@ -31,6 +31,10 @@ def main(argv=None):
     if a.stage == "list-tasks":
         for i, t in enumerate(task_list()):
             print(i, *t)
+        return
+    if a.stage == "brfss":
+        from . import brfss
+        print(brfss.run(Path(a.raw), out, synthetic=a.synthetic, dev=a.dev))
         return
     ctx = PL.Ctx(PL.load_config(), a.raw, out, a.synthetic, a.dev)
     tasks = task_list()

@@ -1,0 +1,33 @@
+# BRFSS 2023 contrasting adult testbed. Variable names and codes are from memory of the 2023
+# codebook and are ALL [VERIFY V13] against codebook23_llcp-v2-508 before the real run.
+base_url: "https://www.cdc.gov/brfss/annual_data/2023/files"
+files:
+  main: LLCP2023XPT.zip          # verified URL 2026-10-04
+  v1: LLCP23V1_XPT.ZIP           # verified URL 2026-10-04 (Ohio fielded ACE on version 1)
+design:
+  state: _state
+  stratum: _ststr
+  psu: _psu
+  weight_main: _llcpwt
+  weight_v1: _lcpwtv1
+outcome:                          # REQUIRES SELORM: confirm (default proposed in protocol 12)
+  name: depression_ever
+  var: addepev3
+  positive: [1]
+  valid: [1, 2]                   # 7 don't know / 9 refused -> excluded from outcome
+  alternate:
+    name: frequent_mental_distress
+    var: menthlth                 # 1-30 days; 88 = none; 77/99 DK/refused
+    rule: ">=14 days"
+ace_items:                        # module order matters for breakoff detection
+  [acedeprs, acedrink, acedrugs, aceprisn, acedivrc, acepunch, acehurt1, aceswear,
+   acetouch, acetthem, acehvsex]
+ace_yes: {acedeprs: [1], acedrink: [1], acedrugs: [1], aceprisn: [1], acedivrc: [1],
+          acepunch: [2, 3], acehurt1: [2, 3], aceswear: [2, 3], acetouch: [2, 3],
+          acetthem: [2, 3], acehvsex: [2, 3]}
+ace_no: {acedeprs: [2], acedrink: [2], acedrugs: [2], aceprisn: [2], acedivrc: [2],
+         acepunch: [1], acehurt1: [1], aceswear: [1], acetouch: [1], acetthem: [1], acehvsex: [1]}
+ace_not_applicable: {acedivrc: [8]}   # "parents not married": observed, structurally not applicable
+dk_ref_codes: [7, 9]
+demographics: [_ageg5yr, _sex, _imprace, _educag, _incomg1]
+seed: 20261004

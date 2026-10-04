@@ -198,7 +198,11 @@ All listed in `src/p2prov/scenarios.py`:
 
 **Design.** CDC-recommended weight per data set and version; `_STSTR` and `_PSU` for variance.
 
-**Status.** Design specified; acquisition and code PENDING (STATUS).
+**Status.** Code built and tested on synthetic data (`src/p2prov/brfss.py`). Real run pending.
+
+**Provenance codes in code.** OBS, OBS_NA_STRUCT, DK_REF, NA_STATE, NA_VERSION, NA_BREAKOFF, NA_ITEM.
+- Unlike YRBS, BRFSS records don't-know/refused explicitly and supports breakoff detection. This is the contrast the BRFSS arm exists to show.
+- Primary cohort: the main data file, all states. ACE items are not asked in non-module states and are version-only in Ohio.
 
 ## 13. Reporting
 

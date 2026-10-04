@@ -26,12 +26,18 @@ Legend:
 - Survey-weighted and unweighted metrics, design-based bootstrap, paired contrasts, validation-chosen thresholds, calibration, subgroups.
 - 13 sensitivity scenarios × 2 outcomes.
 - Figures (provenance map, AUROC forest, contrasts by scenario, calibration); publication tables; `stats.json`.
-- Unit and integration tests: 24 passing.
+- Unit and integration tests: 26 passing.
 - MacBook one-command runner; Slurm prep → array → report chain; environment files.
 - README, variable dictionary, decision log, verification checklist, `AUTHORS.json`, `CITATION.cff`, license.
 - Manuscript draft: introduction and methods written; results templated to `stats.json`. Renderer refuses synthetic statistics.
 - Supplementary methods draft.
-- CSTE tracker.
+- CSTE tracker, plus a weekly scheduled check for the 2027 call (Mondays 8:47 MT).
+- BRFSS arm (`src/p2prov/brfss.py`):
+  - acquisition script with verified 2023 URLs;
+  - 7 ACE provenance classes, including don't-know/refused, breakoff, state-not-fielded, and version-only;
+  - within-state and leave-states-out evaluation;
+  - 2 tests on synthetic data.
+  - Variable names and codes are pending verification (V13).
 
 ## IN PROGRESS
 - Literature review: framework written. Systematic search and screening log still to do.
@@ -49,6 +55,7 @@ Legend:
 - Discuss Dr. Merchant's authorship.
 
 ## PENDING REAL-DATA RUN
+- BRFSS run: `bash scripts/00_acquire_brfss.sh && python -m p2prov.cli brfss --raw data/raw/brfss --out .`
 - Year window, prevalence and rarity characterization, provenance maps, the 26 tasks, figures and tables.
 - Verification items V6–V9 and V12.
 - Journal recommendation (2–3 journals, after results).
@@ -58,9 +65,7 @@ Legend:
 - Decision on adding a repeat-attempt outcome definition. Must be made before test-set scoring.
 
 ## TO BUILD NEXT (no blocker)
-- BRFSS arm: acquisition script for LLCP2023 and LLCP23V1, ACE-module provenance classes, cohort.
-- (moved) CSTE 2027 monitoring: COMPLETE — weekly scheduled check, Mondays 8:47 MT.
-- GitHub repository push. Needs a token or the author's push; see the publish guide when it is ready.
+- GitHub push and Zenodo deposit: guide written (`docs/PUBLISH_GUIDE.md`). Needs your token, or your own push. Release only after verification.
 
 ## VERIFIED
 - (none yet)

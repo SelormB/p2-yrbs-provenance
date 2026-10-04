@@ -16,3 +16,4 @@ Nothing is published or submitted until every item is checked by Selorm Buaka pe
 | V10 | Every citation confirmed against the source | `docs/literature_review.md` tags | REQUIRES SELORM |
 | V11 | Authorship of Dr. Merchant (and any co-author) discussed and agreed | Outside this repo | REQUIRES SELORM |
 | V12 | Manuscript prose revised in the author's own voice | `manuscript/` | PENDING REAL-DATA RUN |
+| V13 | BRFSS 2023 variable names and codes in `config/brfss.yaml` (ACE items, ADDEPEV3, `_STSTR`, `_PSU`, `_LLCPWT`, `_LCPWTV1`, demographics) | 2023 codebook | REQUIRES SELORM |
