@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "DRAFT — not yet released. Cite after the author's verification and release."
+title: "Missingness provenance in youth suicide-attempt prediction: YRBS combined data (Project 2)"
+version: 0.1.0-draft
+authors:
+  - family-names: Buaka
+    given-names: Selorm
+    affiliation: University of Northern Colorado
+    email: othnielbuaka@gmail.com
+    orcid: "PLACEHOLDER"
+license: MIT

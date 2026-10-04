@@ -1,0 +1,11 @@
+data/raw/*
+data/interim/*
+data/processed/*
+results/preds/*
+!**/.gitkeep
+__pycache__/
+*.egg-info/
+.pytest_cache/
+logs/*.log
+slurm/site.env
+*.zip
