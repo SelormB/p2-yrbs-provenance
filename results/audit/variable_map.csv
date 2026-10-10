@@ -1,0 +1,16 @@
+concept,pattern,n_matches,matches,status,label
+sad_hopeless,sad or hopeless,1,qn26,OK,Felt sad or hopeless
+bullied_school,bullied on school property,1,qn24,OK,Were bullied on school property
+bullied_electronic,electronically bullied,1,qn25,OK,Were electronically bullied
+fight,physical fight,1,qn16,AUTHOR_SET,
+weapon,carried a weapon,1,qn12,OK,Carried a weapon on school property
+forced_sex,physically forced to have sexual intercourse,1,qn19,OK,Were ever physically forced to have sexual intercourse
+dating_violence,physically hurt.*dating,1,qn22,AUTHOR_SET,
+unsafe_skip,felt.*unsafe|did not go to school because,1,qn14,OK,Did not go to school because they felt unsafe at school or on their way to or from school
+alcohol_current,current.*alcohol|drink.*alcohol.*past 30|had at least one drink,1,qn42,OK,Currently drank alcohol
+marijuana_current,used marijuana.*past 30|currently used marijuana,1,qn48,OK,Currently used marijuana
+vape_current,electronic vapor,1,qn36,AUTHOR_SET,
+cig_current,smoked cigarettes,1,qn33,AUTHOR_SET,
+rx_opioid,prescription pain medicine|prescription opioid,1,qn49,OK,Ever took prescription pain medicine without a doctor's prescription or differently than how a doctor told them to use it
+sleep,hours of sleep,1,qn85,OK,Got 8 or more hours of sleep
+grades,grades in school,1,qn87,OK,Described their grades in school as mostly A's or B's

@@ -1,0 +1,8 @@
+{
+  "sha256": "e207fefff4cd8b82489e201bd09f44baeb17b55f39205dd58f43a38d4adf67d2",
+  "outcome": "any_attempt",
+  "structure": "leave_sites_out",
+  "seed": 20261004,
+  "source": "P2-internal",
+  "synthetic": false
+}

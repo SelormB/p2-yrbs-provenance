@@ -80,7 +80,7 @@ def stage_resolve(ctx: Ctx) -> pd.DataFrame:
                        if k not in labels})
     vm = H.resolve_concepts(labels, y["predictor_concepts"])
     override = ROOT / "config/variable_map.yaml"
-    if override.exists():
+    if override.exists() and not ctx.synthetic:
         ov = yaml.safe_load(override.read_text()) or {}
         for c, v in ov.items():
             vm.loc[vm.concept == c, ["matches", "n_matches", "status"]] = [v, 1, "AUTHOR_SET"]
@@ -104,16 +104,18 @@ def stage_ingest(ctx: Ctx) -> pd.DataFrame:
     y = ctx.cfg["yrbs"]
     d = y["design"]
     items = list(resolved_items(ctx).values())
-    extra = [g["gate"] for g in skip_gates(ctx)]
-    cols = sorted(set(list(d.values()) + y["demographic_vars"] + y["proximal_items"] + items + extra +
-                      [o["raw_var"] for o in y["outcomes"].values()]))
+    extra = [g["gate"] for g in skip_gates(ctx)] + [g["dependent"] for g in skip_gates(ctx)]
+    extra += [v["raw"] for v in y.get("not_applicable", {}).values()]
     sas_fields = IO.parse_sas_layout((ctx.raw / y["sas_input_program"]).read_text(errors="replace"))
     have = {f.name for f in sas_fields}
+    extra = [c for c in extra if c in have]  # optional helper columns
+    cols = sorted(set(list(d.values()) + y["demographic_vars"] + y["proximal_items"] + items + extra +
+                      [o["raw_var"] for o in y["outcomes"].values()]))
     absent = [c for c in cols if c not in have]
     if absent:
         raise KeyError(f"Variables not in CDC layout: {absent}. Check config.")
-    df = IO.read_sadc(ctx.raw, y["data_files"], y["sas_input_program"], usecols=cols)
-    df["row_id"] = df["source_file"] + ":" + df.groupby("source_file").cumcount().astype(str)
+    df = IO.read_sadc(ctx.raw, y["data_files"], y["sas_input_program"], usecols=cols,
+                      years=y["candidate_years"])
     df.to_parquet(ctx.p("interim/yrbs_raw.parquet"), index=False)
     write_provenance_log(ctx)
     return df
@@ -148,6 +150,10 @@ def stage_provenance(ctx: Ctx, absent_threshold: float = 1.0) -> pd.DataFrame:
     df = df[df[d["year"]].isin(y["candidate_years"])].reset_index(drop=True)
     items = list(resolved_items(ctx).values()) + y["proximal_items"]
     prov = PV.label_provenance(df, items, d["site"], d["year"], absent_threshold=absent_threshold)
+    for it, rule in y.get("not_applicable", {}).items():
+        if it in prov and rule["raw"] in df:
+            na = df[it].isna() & df[rule["raw"]].isin(rule["codes"])
+            prov.loc[na, it] = PV.OBS_NONSUB
     suffix = "" if absent_threshold == 1.0 else f"_thr{int(absent_threshold*100)}"
     prov.add_prefix("prov__").assign(row_id=df["row_id"]).to_parquet(
         ctx.p(f"processed/provenance{suffix}.parquet"), index=False)
@@ -317,7 +323,17 @@ def stage_evaluate(ctx: Ctx, outcome: str, scen: str) -> pd.DataFrame:
     rows, cal_rows, sub_rows, thr_rows = [], [], [], []
     test_ids = preds.loc[preds.split == "test", "row_id"].unique()
     tm = meta.loc[test_ids]
-    boot_strata, boot_psu = tm["design_stratum"].to_numpy(), tm["design_psu"].to_numpy()
+    # Variance strata = survey (site x year), clusters = PSU. Using the survey's own strata left many
+    # test-set strata with a single PSU (zero variance contribution) because only 20% of PSUs per survey
+    # are in the test split; collapsing to survey-level strata is conservative. (DECISIONS 2026-10-10)
+    boot_strata, boot_psu = tm["survey_id"].to_numpy(), tm["design_psu"].to_numpy()
+    st = pd.DataFrame({"h": tm["design_stratum"].to_numpy(), "c": boot_psu}).drop_duplicates()
+    k = st.groupby("h").c.nunique()
+    sv = pd.DataFrame({"h": boot_strata, "c": boot_psu}).drop_duplicates().groupby("h").c.nunique()
+    diag = {"test_rows": int(len(tm)), "design_strata": int(len(k)), "design_strata_single_psu": int((k == 1).sum()),
+            "survey_strata": int(len(sv)), "survey_strata_single_psu": int((sv == 1).sum()),
+            "test_psus": int(st.c.nunique())}
+    ctx.p(f"results/metrics/bootdiag__{outcome}__{scen}.json").write_text(json.dumps(diag, indent=2))
     P = {}
     for name, g in preds.groupby("method"):
         va, te = g[g.split == "valid"].set_index("row_id"), g[g.split == "test"].set_index("row_id").reindex(test_ids)

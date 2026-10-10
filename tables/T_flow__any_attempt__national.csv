@@ -1,0 +1,7 @@
+step,n,surveys
+records in combined file,1008297,250
+"years in [2015, 2017, 2019, 2021, 2023]",1008297,250
+national survey,81401,5
+weighted (representative) surveys,81401,5
+survey asked the outcome item,81401,5
+valid outcome response,68682,5

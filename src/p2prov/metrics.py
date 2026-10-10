@@ -68,7 +68,12 @@ def calibration_intercept_slope(y, p, w=None, iters=50):
         mu = 1 / (1 + np.exp(-(X @ beta)))
         g = X.T @ (w * (y - mu))
         H = (X * (w * mu * (1 - mu))[:, None]).T @ X
-        step = np.linalg.solve(H, g)
+        try:
+            step = np.linalg.solve(H, g)
+        except np.linalg.LinAlgError:  # separation / degenerate subgroup
+            return float('nan'), float('nan')
+        if not np.all(np.isfinite(step)):
+            return float('nan'), float('nan')
         beta += step
         if np.max(np.abs(step)) < 1e-10:
             break
@@ -78,6 +83,8 @@ def calibration_intercept_slope(y, p, w=None, iters=50):
         mu = 1 / (1 + np.exp(-(a + lp)))
         g = np.sum(w * (y - mu))
         h = np.sum(w * mu * (1 - mu))
+        if h <= 0 or not np.isfinite(g / h):
+            return float('nan'), float(beta[1])
         a += g / h
         if abs(g / h) < 1e-10:
             break

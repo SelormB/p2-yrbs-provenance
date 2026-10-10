@@ -82,3 +82,10 @@ The official 2027 call was not posted as of 2026-10-04. Past cycles:
 - abstracts were limited to 400 words, with a separate student-abstract category.
 
 Status: TARGET. See `cste/TRACKER.md`.
+
+## Added 2026-10-10 from the downloaded files
+
+- **Raw question items are character variables.** In the 2023 SADC layout (`2023-SADC-SAS-Input-Program.sas`), raw items such as `q29` are character fields holding digit codes ("1"–"5"). QN indicators are numeric (1 = yes, 2 = no). The reader converts the q-items to numbers.
+- **QN22 (physical dating violence) is missing for students who did not date** (q22 = "1"). This is structural not-applicable, not nonresponse. The pipeline codes it `OBS_NONSUB`.
+- **Combined file contents, 2015–2023:** 1,008,297 records across 250 site-year surveys. All carry a weight.
+- **Agreement with CDC (V7):** national 2023 weighted prevalence of any attempt is 9.5%, the same as the published estimate.

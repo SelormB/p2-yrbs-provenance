@@ -1,0 +1,77 @@
+{
+  "years": [
+    2015,
+    2017,
+    2019,
+    2021,
+    2023
+  ],
+  "audit": [
+    {
+      "year": 2015,
+      "n_surveys": 47,
+      "n_records": 232283,
+      "q29_asked_share": 0.9574468085106383,
+      "q30_asked_share": 0.9361702127659575,
+      "predictor_items_in_year": 14,
+      "predictor_items_total": 15,
+      "median_site_absence_share": 0.06666666666666667,
+      "meets_rules": true
+    },
+    {
+      "year": 2017,
+      "n_surveys": 51,
+      "n_records": 222152,
+      "q29_asked_share": 0.9803921568627451,
+      "q30_asked_share": 0.9019607843137255,
+      "predictor_items_in_year": 15,
+      "predictor_items_total": 15,
+      "median_site_absence_share": 0.0,
+      "meets_rules": true
+    },
+    {
+      "year": 2019,
+      "n_surveys": 60,
+      "n_records": 220180,
+      "q29_asked_share": 0.9666666666666667,
+      "q30_asked_share": 0.8666666666666667,
+      "predictor_items_in_year": 15,
+      "predictor_items_total": 15,
+      "median_site_absence_share": 0.0,
+      "meets_rules": true
+    },
+    {
+      "year": 2021,
+      "n_surveys": 53,
+      "n_records": 177632,
+      "q29_asked_share": 0.9433962264150944,
+      "q30_asked_share": 0.8113207547169812,
+      "predictor_items_in_year": 15,
+      "predictor_items_total": 15,
+      "median_site_absence_share": 0.06666666666666667,
+      "meets_rules": true
+    },
+    {
+      "year": 2023,
+      "n_surveys": 39,
+      "n_records": 156050,
+      "q29_asked_share": 0.9487179487179487,
+      "q30_asked_share": 0.7948717948717948,
+      "predictor_items_in_year": 15,
+      "predictor_items_total": 15,
+      "median_site_absence_share": 0.06666666666666667,
+      "meets_rules": true
+    }
+  ],
+  "rules": {
+    "min_outcome_asked": 0.5,
+    "min_item_share": 0.8
+  },
+  "candidate_years": [
+    2015,
+    2017,
+    2019,
+    2021,
+    2023
+  ]
+}

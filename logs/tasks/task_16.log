@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/othnielbuaka/Documents/p2-yrbs-provenance/src/p2prov/cli.py", line 62, in <module>
+    main()
+    ~~~~^^
+  File "/Users/othnielbuaka/Documents/p2-yrbs-provenance/src/p2prov/cli.py", line 51, in main
+    if st in ("evaluate", "task"): PL.stage_evaluate(ctx, a.outcome, a.scenario)
+                                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/othnielbuaka/Documents/p2-yrbs-provenance/src/p2prov/pipeline.py", line 363, in stage_evaluate
+    a_, s_ = M.calibration_intercept_slope(yt[idx], P[name][idx], wsub[idx])
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/othnielbuaka/Documents/p2-yrbs-provenance/src/p2prov/metrics.py", line 71, in calibration_intercept_slope
+    step = np.linalg.solve(H, g)
+  File "/Users/othnielbuaka/Documents/p2-yrbs-provenance/.venv/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 463, in solve
+    r = gufunc(a, b, signature=signature)
+  File "/Users/othnielbuaka/Documents/p2-yrbs-provenance/.venv/lib/python3.13/site-packages/numpy/linalg/_linalg.py", line 144, in _raise_linalgerror_singular
+    raise LinAlgError("Singular matrix")
+numpy.linalg.LinAlgError: Singular matrix

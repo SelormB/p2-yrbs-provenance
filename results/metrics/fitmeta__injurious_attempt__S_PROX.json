@@ -1,0 +1,88 @@
+{
+  "outcome": "injurious_attempt",
+  "scenario": "S_PROX",
+  "items": [
+    "qn26",
+    "qn24",
+    "qn25",
+    "qn16",
+    "qn12",
+    "qn19",
+    "qn22",
+    "qn14",
+    "qn42",
+    "qn48",
+    "qn36",
+    "qn33",
+    "qn49",
+    "qn85",
+    "qn87",
+    "qn27",
+    "qn28"
+  ],
+  "n_train": 305003,
+  "events_train": 9782,
+  "split_counts": {
+    "train": 305003,
+    "valid": 100701,
+    "test": 99003
+  },
+  "methods": [
+    {
+      "method": "CC_LR",
+      "status": "OK",
+      "seconds": 0.6
+    },
+    {
+      "method": "MEAN_LR",
+      "status": "OK",
+      "seconds": 0.8
+    },
+    {
+      "method": "MIND_LR",
+      "status": "OK",
+      "seconds": 1.1
+    },
+    {
+      "method": "MICE_LR",
+      "status": "OK",
+      "seconds": 39.2
+    },
+    {
+      "method": "HGB_NATIVE",
+      "status": "OK",
+      "seconds": 9.7
+    },
+    {
+      "method": "PROV_LR",
+      "status": "OK",
+      "seconds": 1.5
+    },
+    {
+      "method": "PROV_HGB",
+      "status": "OK",
+      "seconds": 14.7
+    },
+    {
+      "method": "PATTERN_LR",
+      "status": "OK",
+      "seconds": 13.0
+    },
+    {
+      "method": "STRUCT_ONLY",
+      "status": "OK",
+      "seconds": 5.3
+    },
+    {
+      "method": "DEMO_LR",
+      "status": "OK",
+      "seconds": 0.7
+    },
+    {
+      "method": "MERCHANT_SP",
+      "status": "BLOCKED \u2014 REQUIRES MERCHANT METHOD MATERIALS",
+      "seconds": 0
+    }
+  ],
+  "mode": "REAL"
+}

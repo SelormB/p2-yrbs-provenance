@@ -1,0 +1,11 @@
+file,bytes,sha256,source_url,synthetic
+sadc_2023_national.dat,197882475,cedacde8e82bfadddb4f55c750c6aeed6c8fa1586ad19f70c27d964f8cc4bcec,https://www.cdc.gov/yrbs/files/sadc_2023/HS/sadc_2023_national.dat,False
+sadc_2023_district.dat,405848856,6a210c6ca9bba97ae9923b6dba83d9f608206dab4f61426be76ff92bfcf03c13,https://www.cdc.gov/yrbs/files/sadc_2023/HS/sadc_2023_district.dat,False
+sadc_2023_state_a_d.dat,81938535,ad33dbf957ffd40bf55297feae9d06c2c76e1aebc0c44cddabd36d80fe36d86b,https://www.cdc.gov/yrbs/files/sadc_2023/HS/sadc_2023_state_a_d.dat,False
+sadc_2023_state_e_h.dat,98091588,4dbf95b08436479d59e6054b24929862bc566fc1a9171892d13b86a62343e19f,https://www.cdc.gov/yrbs/files/sadc_2023/HS/sadc_2023_state_e_h.dat,False
+sadc_2023_state_i_l.dat,99297492,8beb5d052735ff954b84e6c018743005aca7276629295e101fedd9cdd328e309,https://www.cdc.gov/yrbs/files/sadc_2023/HS/sadc_2023_state_i_l.dat,False
+sadc_2023_state_m.dat,375185328,10f78b31ae491f2e377a2302d6631c1b805c9ddd6fdf80f7f6aa5735a78df180,https://www.cdc.gov/yrbs/files/sadc_2023/HS/sadc_2023_state_m.dat,False
+sadc_2023_state_n_p.dat,258532764,0a56667f2cfaa1f43d35dc60517db3d8eb078171d4dc61cd1e2e0a0660ae1767,https://www.cdc.gov/yrbs/files/sadc_2023/HS/sadc_2023_state_n_p.dat,False
+sadc_2023_state_q_t.dat,76162317,35251952d06350cdbc2d6a499f24ec8af5847aa5070b05174f004d73c35c423f,https://www.cdc.gov/yrbs/files/sadc_2023/HS/sadc_2023_state_q_t.dat,False
+sadc_2023_state_u_z.dat,218179269,27869a37c7774f4a042f5a6039f99829df66ee5ae485de9443a117ce4274e1cb,https://www.cdc.gov/yrbs/files/sadc_2023/HS/sadc_2023_state_u_z.dat,False
+2023-SADC-SAS-Input-Program.sas,22071,5ecb357e72221cc8687418e18d5906e3b0d7b509c109ef9efbfdc7d182f2351a,https://www.cdc.gov/yrbs/files/sadc_2023/HS/2023-SADC-SAS-Input-Program.sas,False

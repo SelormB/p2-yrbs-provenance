@@ -9,3 +9,6 @@ __pycache__/
 logs/*.log
 slurm/site.env
 *.zip
+interim/
+processed/
+.venv/

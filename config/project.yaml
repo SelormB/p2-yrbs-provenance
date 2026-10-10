@@ -49,11 +49,11 @@ yrbs:
     any_attempt:
       raw_var: q29        # A=0 times .. E=6+ times (coded 1..5)
       positive_codes: [2, 3, 4, 5]
-      valid_codes: [1, 2, 3, 4, 5]
+      valid_codes: [1, 2, 3, 4, 5]   # verified vs $H29S 2026-10-10
     injurious_attempt:
       raw_var: q30        # A=did not attempt, B=yes, C=no (coded 1..3)
       positive_codes: [2]
-      valid_codes: [1, 2, 3]
+      valid_codes: [1, 2, 3]   # verified vs $H30S 2026-10-10
 
   # Same-construct items excluded from the primary predictor set (sensitivity S-PROX adds them).
   proximal_items: [qn27, qn28]   # CDC QN27 considered, QN28 plan (User's Guide)
@@ -79,6 +79,10 @@ yrbs:
     sleep:             "hours of sleep"
     grades:            "grades in school"
   demographic_vars: [age, sex, grade, race7, sexid]
+  # Structural not-applicable: CDC sets the QN indicator to missing for these respondents.
+  # Verified against 2023-SADC-SAS-Formats-Program ($H22S "1" = Did not date). Coded OBS_NONSUB.
+  not_applicable:
+    qn22: {raw: q22, codes: [1]}
 
 splits:
   # Primary: PH-MissBench frozen YRBS split if compatible (see docs/protocol.md 6.1);
@@ -92,7 +96,7 @@ splits:
 
 evaluation:
   bootstrap_reps: 1000        # PSU-within-stratum bootstrap on the test set
-  bootstrap_reps_dev: 50      # used for MacBook dev runs (--dev)
+  bootstrap_reps_dev: 200     # sensitivity scenarios on the MacBook (--dev); primary uses bootstrap_reps
   thresholds:                 # all chosen on VALIDATION, applied to test
     - {name: sens80, rule: target_sensitivity, value: 0.80}
     - {name: top10, rule: top_fraction, value: 0.10}

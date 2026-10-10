@@ -1,0 +1,80 @@
+{
+  "any_attempt__within_survey": {
+    "sha256": "a598fe64d767afb756cb69419b2f256765034729563651acb1c493254ec2250c",
+    "outcome": "any_attempt",
+    "structure": "within_survey",
+    "seed": 20261004,
+    "source": "P2-internal",
+    "synthetic": false,
+    "counts": {
+      "train": 453345,
+      "test": 151824,
+      "valid": 148201
+    }
+  },
+  "any_attempt__leave_sites_out": {
+    "sha256": "e207fefff4cd8b82489e201bd09f44baeb17b55f39205dd58f43a38d4adf67d2",
+    "outcome": "any_attempt",
+    "structure": "leave_sites_out",
+    "seed": 20261004,
+    "source": "P2-internal",
+    "synthetic": false,
+    "counts": {
+      "train": 556034,
+      "valid": 99875,
+      "test": 97461
+    }
+  },
+  "any_attempt__temporal_last_year": {
+    "sha256": "8180871d9ff4a8bac2d2eb31ab9bc66b96bbd341dacfee12fc60a7d911de6927",
+    "outcome": "any_attempt",
+    "structure": "temporal_last_year",
+    "seed": 20261004,
+    "source": "P2-internal",
+    "synthetic": false,
+    "counts": {
+      "train": 487540,
+      "test": 143884,
+      "valid": 121946
+    }
+  },
+  "injurious_attempt__within_survey": {
+    "sha256": "48219a32ae58958c7a76d9457611e9979b11557d42f13ec054d0efd66ae7c207",
+    "outcome": "injurious_attempt",
+    "structure": "within_survey",
+    "seed": 20261004,
+    "source": "P2-internal",
+    "synthetic": false,
+    "counts": {
+      "train": 340814,
+      "valid": 112782,
+      "test": 109529
+    }
+  },
+  "injurious_attempt__leave_sites_out": {
+    "sha256": "8afba517701053977f0e67cd2177e477223142c21f7187bd98fe4d3ce2172284",
+    "outcome": "injurious_attempt",
+    "structure": "leave_sites_out",
+    "seed": 20261004,
+    "source": "P2-internal",
+    "synthetic": false,
+    "counts": {
+      "train": 321111,
+      "valid": 158407,
+      "test": 83607
+    }
+  },
+  "injurious_attempt__temporal_last_year": {
+    "sha256": "0b111e7c795a4f6f9d91801a1c47c30f8cfbc1bf111a14c21a604b61d0592154",
+    "outcome": "injurious_attempt",
+    "structure": "temporal_last_year",
+    "seed": 20261004,
+    "source": "P2-internal",
+    "synthetic": false,
+    "counts": {
+      "train": 388239,
+      "valid": 94555,
+      "test": 80331
+    }
+  }
+}

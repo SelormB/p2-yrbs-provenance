@@ -1,0 +1,6 @@
+# Author-set concept -> variable choices (overrides automatic matches). Set 2026-10-10 from the 2023
+# SADC SAS labels; REQUIRES SELORM confirmation (V3).
+fight: qn16              # "Were in a physical fight" (not the on-school-property version qn17)
+dating_violence: qn22    # "Experienced physical dating violence"; non-daters -> see not_applicable
+vape_current: qn36       # "Currently used an electronic vapor product"
+cig_current: qn33        # "Currently smoked cigarettes"

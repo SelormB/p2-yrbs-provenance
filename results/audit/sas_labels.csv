@@ -1,0 +1,198 @@
+,label
+sitecode,Site code
+sitename,Site name
+sitetype,Site type
+sitetypenum,"1=District, 2=State, 3=National"
+year,4-digit Year of survey
+survyear,1=1991...17=2023
+weight,Analysis weight
+stratum,Analysis stratum
+psu,Analysis primary sampling unit
+record,Record ID
+age,1= <=12...7=18+ years old
+sex,"1=female, 2=male"
+grade,1=9th...4=12th grade
+race4,4-level race variable
+race7,7-level race variable
+stheight,Height in meters
+stweight,Weight in kilograms
+bmi,Body Mass Index
+bmipct,BMI percentile
+qnobese,Had obesity
+qnowt,Were overweight
+q65,Transgender
+q64,Sexual identity
+q63,Sex of sexual contacts
+sexid,Sexual identity
+sexid2,Collapsed sexual identity
+sexpart,Sex of sex contact(s)
+sexpart2,Collapsed sex of sex contact(s)
+transg,Transgender for YOL
+sextrans,Sexual and Gender Identity for YOL
+q8,Seat belt use
+q9,Riding with a drinking driver
+q10,Drinking and driving
+q11,Texting and driving
+q12,Weapon carrying at school
+q13,Gun carrying
+q14,Safety concerns at school
+q15,Threatened at school
+q16,Physical fighting
+q17,Physical fighting at school
+q18,Saw physical violence in neighborhood
+q19,Forced sexual intercourse
+q20,Sexual violence
+q21,Sexual dating violence
+q22,Physical dating violence
+q23,Treated badly because of race or ethnicity
+q24,Bullying at school
+q25,Electronic bullying
+q26,Sad or hopeless
+q27,Considered suicide
+q28,Made a suicide plan
+q29,Attempted suicide
+q30,Injurious suicide attempt
+q31,Ever cigarette use
+q32,Initiation of cigarette smoking
+q33,Current cigarette use
+q34,Smoked > 10 cigarettes
+q35,Electronic vapor product use
+q36,Current electronic vapor use
+q37,EVP from store
+q38,Current smokeless tobacco use
+q39,Current cigar use
+q40,All tobacco product cessation
+q41,Initiation of alcohol use
+q42,Current alcohol use
+q43,Current binge drinking
+q44,Largest number of drinks
+q45,Source of alcohol
+q46,Ever marijuana use
+q47,Initiation of marijuana use
+q48,Current marijuana use
+q49,Ever prescription pain medicine use
+q50,Ever cocaine use
+q51,Ever inhalant use
+q52,Ever heroin use
+q53,Ever methamphetamine use
+q54,Ever ecstasy use
+q55,Illegal injected drug use
+q56,Ever sexual intercourse
+q57,Sex before 13 years
+q58,Number of sex partners
+q59,Current sexual activity
+q60,Alcohol/drugs and sex
+q61,Condom use
+q62,Birth control pill use
+q66,Perception of weight
+q67,Weight loss
+q68,Fruit juice drinking
+q69,Fruit eating
+q70,Green salad eating
+q71,Potato eating
+q72,Carrot eating
+q73,Other vegetable eating
+q74,No soda drinking
+q75,Breakfast eating
+q76,Physical activity >= 5 days
+q77,PE attendance
+q78,Sports team participation
+q79,Concussion
+q80,Social media
+q81,HIV testing
+q82,STD testing
+q83,Oral health care
+q84,Current mental health
+q85,Sleep
+q86,Unstable housing
+q87,Grades in school
+qn8,Did not always wear a seat belt
+qn9,Rode with a driver who had been drinking alcohol
+qn10,Drove a car or other vehicle when they had been drinking alcohol
+qn11,Texted or e-mailed while driving a car or other vehicle
+qn12,Carried a weapon on school property
+qn13,Carried a gun
+qn14,Did not go to school because they felt unsafe at school or on their way to or from school
+qn15,Were threatened or injured with a weapon on school property
+qn16,Were in a physical fight
+qn17,Were in a physical fight on school property
+qn18,"Ever saw someone get physically attacked, beaten, stabbed, or shot in their neighborhood"
+qn19,Were ever physically forced to have sexual intercourse
+qn20,Experienced sexual violence
+qn21,Experienced sexual dating violence
+qn22,Experienced physical dating violence
+qn23,Felt that they were ever treated badly or unfairly in school because of their race or ethnicity
+qn24,Were bullied on school property
+qn25,Were electronically bullied
+qn26,Felt sad or hopeless
+qn27,Seriously considered attempting suicide
+qn28,Made a plan about how they would attempt suicide
+qn29,Actually attempted suicide
+qn30,"Had a suicide attempt that resulted in an injury, poisoning, or overdose that had to be treated by a doctor or nurse"
+qn31,Ever smoked a cigarette
+qn32,Smoked a cigarette before age 13 years
+qn33,Currently smoked cigarettes
+qn34,Smoked more than 10 cigarettes per day
+qn35,Ever used an electronic vapor product
+qn36,Currently used an electronic vapor product
+qn37,"Usually got their electronic vapor products by buying them themselves in a convenience store, supermarket, discount store, or gas station"
+qn38,Currently used smokeless tobacco
+qn39,Currently smoked cigars
+qn40,Tried to quit using all tobacco products
+qn41,Had their first drink of alcohol before age 13 years
+qn42,Currently drank alcohol
+qn43,Currently were binge drinking
+qn44,Reported that the largest number of drinks they had in a row was 10 or more
+qn45,Usually got the alcohol they drank by someone giving it to them
+qn46,Ever used marijuana
+qn47,Tried marijuana for the first time before age 13 years
+qn48,Currently used marijuana
+qn49,Ever took prescription pain medicine without a doctor's prescription or differently than how a doctor told them to use it
+qn50,Ever used cocaine
+qn51,Ever used inhalants
+qn52,Ever used heroin
+qn53,Ever used methamphetamines
+qn54,Ever used ecstasy
+qn55,Ever injected any illegal drug
+qn56,Ever had sexual intercourse
+qn57,Had sexual intercourse for the first time before age 13 years
+qn58,Had sexual intercourse with four or more persons during their life
+qn59,Were currently sexually active
+qn60,Drank alcohol or used drugs before last sexual intercourse
+qn61,Used a condom during last sexual intercourse
+qn62,Used birth control pills before last sexual intercourse with opposite-sex partner
+qn66,Described themselves as slightly or very overweight
+qn67,Were trying to lose weight
+qn68,Did not drink fruit juice
+qn69,Did not eat fruit
+qn70,Did not eat salad
+qn71,Did not eat potatoes
+qn72,Did not eat carrots
+qn73,Did not eat other vegetables
+qn74,"Did not drink a can, bottle, or glass of soda or pop"
+qn75,Did not eat breakfast
+qn76,Were physically active at least 60 minutes per day on 5 or more days
+qn77,Attended physical education (PE) classes on 1 or more days
+qn78,Played on at least one sports team
+qn79,Had a concussion from playing a sport or being physically active
+qn80,Used social media several times a day
+qn81,Were ever tested for human immunodeficiency virus (HIV)
+qn82,Were tested for a sexually transmitted disease (STD) other than HIV
+qn83,Saw a dentist
+qn84,Reported that their mental health was most of the time or always not good
+qn85,Got 8 or more hours of sleep
+qn86,Experience unstable housing
+qn87,Described their grades in school as mostly A's or B's
+qnfrcig,Currently smoked cigarettes frequently
+qndaycig,Currently smoked cigarettes daily
+qnfrevp,Currently smoked electronic vapor products frequently
+qndayevp,Currently smoked electronic vapor products daily
+qnfrskl,Currently used smokeless tobacco frequently
+qndayskl,Currently used smokeless tobacco daily
+qnfrcgr,Currently smoked cigars frequently
+qndaycgr,Currently smoked cigars daily
+qntb2,Currently smoked cigarettes or cigars
+qntb3,Currently smoked cigarettes or cigars or used smokeless tobacco
+qntb4,Currently smoked cigarettes or cigars or used smokeless tobacco or electronic vapor products
+qntb5,Currently smoked cigarettes or used electronic vapor products
+qniudimp,Used an IUD (such as Mirena or ParaGard) or implant (such as Implanon or Nexplanon) before last sexual intercourse with an opposite-sex partner

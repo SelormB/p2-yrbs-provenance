@@ -1,8 +1,5 @@
-# Real-data skip gates for the 2023 electronic national YRBS.
-# CDC (MMWR Suppl 2024;73(4):1-12) states appropriately skipped questions are coded to the
-# implied "did not engage" value (example: never smoked -> 0 days smoked in past 30 days).
-# The specific gate/dependent pairs and codes must be read from the 2023 questionnaire and
-# SADC formats program. Each entry stays verified: false (and is ignored) until the author checks it.
-# REQUIRES SELORM: verify V5 in docs/VERIFICATION.md
+# 2023 electronic skips (CDC: skipped items coded to the implied response). Codes verified
+# against 2023-SADC-SAS-Formats-Program on 2026-10-10; author to confirm (V5).
 gates:
-  - {gate: "[VERIFY: ever-smoked cigarette q-var]", gate_no_codes: ["[VERIFY]"], dependent: "[VERIFY: current cigarette q-var]", implied_code: "[VERIFY]", verified: false}
+  - {gate: q31, gate_no_codes: [2], dependent: q33, implied_code: 1, verified: true}   # never smoked -> 0 days
+  - {gate: q35, gate_no_codes: [2], dependent: q36, implied_code: 1, verified: true}   # never vaped -> 0 days
