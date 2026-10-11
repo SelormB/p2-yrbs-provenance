@@ -1,0 +1,4 @@
+date,database,query,hits,screened,relevant_pmid,relevance,note
+2026-10-10,PubMed,"(""Youth Risk Behavior"") AND suicid* AND (predict* OR ""machine learning"")",87,50 titles (page 1),36263637;31170212;41941504;41661893;38758578,prediction of adolescent suicidal behaviour,abstracts not read (PubMed blocked automated reads); page 2 not screened
+2026-10-10,PubMed,"(""Youth Risk Behavior"") AND (missing OR imputation OR ""skip pattern"" OR nonresponse)",57,39 titles,37757704;41621502,nonresponse in YRBS studied as an outcome,abstracts not read; items 35-45 and page 2 not captured
+2026-10-10,PubMed (citation check),exact titles,4,4,32540389;30203058;38626948;36638125,citations verified,Sperrin 2020; Mercaldo & Blume 2020; Collins 2024; MacNell 2023

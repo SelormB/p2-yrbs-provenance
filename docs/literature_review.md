@@ -42,7 +42,7 @@ CDC states that these cannot be told apart at the individual level (Brener 2024 
 **Missingness mechanisms.** Rubin 1976, Biometrika 63:581–592; Little & Rubin, *Statistical Analysis with Missing Data*, 3rd ed., 2019 **[VERIFY]**.
 
 **Prediction differs from inference.** Missing-data handling for prediction should match what is available at deployment. Missing indicators and imputation without the outcome are legitimate for prediction even where they bias causal estimates:
-- Sperrin, Martin, Sisk, Peek 2020, J Clin Epidemiol **[V-web: title/journal; volume and pages VERIFY]**.
+- Sperrin, Martin, Sisk, Peek 2020, J Clin Epidemiol 125:183–187, PMID 32540389 **[V-web]**.
 - Sisk, Sperrin, Peek, van Smeden, Martin 2023, Stat Methods Med Res — simulation of imputation and missing indicators across development and deployment **[V-web]**.
 
 **Cautions on missing indicators.** "A cautionary note on the use of the missing indicator method for handling missing data in prediction research," J Clin Epidemiol 2020 **[V-web: title; authors VERIFY — believed van Smeden, Groenwold, Moons]**. Motivates reporting `MIND_LR` alongside the alternatives rather than as the default.
@@ -50,7 +50,7 @@ CDC states that these cannot be told apart at the individual level (Brener 2024 
 **Multiple imputation by chained equations.** van Buuren & Groothuis-Oudshoorn 2011, J Stat Softw 45(3) **[VERIFY]**. Implemented with scikit-learn `IterativeImputer` (posterior sampling, m=5).
 
 **Pattern submodels:**
-- Mercaldo & Blume, "Missing data and prediction: the pattern submodel," Biostatistics 2020 **[V-web: title; volume and pages VERIFY]**. Basis for `PATTERN_LR`.
+- Fletcher Mercaldo & Blume, "Missing data and prediction: the pattern submodel," Biostatistics 2020;21(2):236–252, PMID 30203058 **[V-web]**. Basis for `PATTERN_LR`.
 - Stempfle, Panahi, Johansson, "Sharing pattern submodels for prediction with missing values," AAAI 2023 **[V-web]**.
 
 **Trees and missing values:**
@@ -68,7 +68,7 @@ CDC states that these cannot be told apart at the individual level (Brener 2024 
 ## 5. Evaluation and reporting standards
 
 - Calibration: Van Calster et al. 2019, BMC Med 17:230 **[VERIFY]**.
-- Reporting: Collins et al. 2024, TRIPOD+AI, BMJ 385:e078378 **[VERIFY]**.
+- Reporting: Collins et al. 2024, TRIPOD+AI, BMJ 385:e078378, PMID 38626948 **[V-web]**.
 - Steyerberg, *Clinical Prediction Models*, 2nd ed., 2019 **[VERIFY]**.
 
 ## 6. BRFSS ACE module
@@ -82,7 +82,15 @@ The co-authored branching-survey manuscript is the methodological foundation for
 - **REQUIRES MERCHANT METHOD MATERIALS.**
 - Citation details to be supplied by the author.
 
-## Systematic search — PENDING (in STATUS)
+## Search results so far (2026-10-10; log in `docs/search_log.csv`)
+
+Directly relevant, abstracts still to be read by the author:
+- Baiden P, et al. Racial/ethnic differences in adolescents' non-response to suicide attempt: YRBS 2015–2019. J Psychiatr Res 2023. PMID 37757704.
+- He Y, et al. Predicting nonresponse to sexual identity question in youth risk behavior surveillance: a machine learning analysis of complex survey data. Ann Epidemiol 2026. PMID 41621502.
+
+Adolescent suicide prediction with ML (mostly Korea YRBS): Jung 2019 PLoS One (PMID 31170212); Lim 2022 Clin Psychopharmacol Neurosci (PMID 36263637); Park 2026 PLoS One (PMID 41941504); Shahsavar 2025 PLOS Ment Health (PMID 41661893).
+
+## Systematic search — PARTLY DONE
 
 **Databases:** PubMed, Scopus, ERIC.
 

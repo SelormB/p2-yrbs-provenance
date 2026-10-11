@@ -53,6 +53,9 @@ Legend:
 - Results preprint DRAFT written (Docs): https://claude.ai/code/artifact/8e74d553-f742-459f-b8ea-c2d2b48ab46a
   — not for posting until verification, authorship, and [VERIFY] references are resolved.
 
+- Journal shortlist: AJE (Practice of Epidemiology) → Annals of Epidemiology → BMC Med Res Methodol (`docs/journals.md`).
+- References verified (Sperrin, Fletcher Mercaldo & Blume, MacNell, Collins); search log started (`docs/search_log.csv`).
+
 ## IN PROGRESS
 - Literature review: framework written. Systematic search and screening log still to do.
 
@@ -72,7 +75,6 @@ Legend:
 
 ## PENDING REAL-DATA RUN
 - Verification items V6, V8, V9 and V12 (V7 checked).
-- Journal recommendation (2–3 journals, after results).
 - CSTE abstract (after results and the official 2027 call).
 - Poster material.
 - Seed-repetition runs for model-fitting variance (HPC).
