@@ -56,6 +56,8 @@ Legend:
 - Journal shortlist: AJE (Practice of Epidemiology) → Annals of Epidemiology → BMC Med Res Methodol (`docs/journals.md`).
 - References verified (Sperrin, Fletcher Mercaldo & Blume, MacNell, Collins); search log started (`docs/search_log.csv`).
 
+- Poster draft (Design canvas, landscape Letter; resize when CSTE posts specs): https://claude.ai/artifact/4UTwja189R5zBkYq6RGcpE
+
 ## IN PROGRESS
 - Literature review: framework written. Systematic search and screening log still to do.
 
@@ -76,7 +78,6 @@ Legend:
 ## PENDING REAL-DATA RUN
 - Verification items V6, V8, V9 and V12 (V7 checked).
 - CSTE abstract (after results and the official 2027 call).
-- Poster material.
 - Seed-repetition runs for model-fitting variance (HPC).
 - Repeat-attempt outcome: not added (test sets already scored; would now be post hoc).
 - Full 1,000-replicate CIs for sensitivity scenarios (HPC).
