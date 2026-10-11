@@ -1,0 +1,8 @@
+{
+  "test_rows": 83607,
+  "design_strata": 739,
+  "design_strata_single_psu": 7,
+  "survey_strata": 43,
+  "survey_strata_single_psu": 0,
+  "test_psus": 3372
+}

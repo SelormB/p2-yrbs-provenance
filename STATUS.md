@@ -49,9 +49,11 @@ Legend:
 - Open checks resolved: S_THR95 = S0 because no item is 95–99.99% missing in any survey; Indiana has no ACE
   responses in the public BRFSS main file despite CDC's module list (flagged).
 
+- CIs re-evaluated with survey-level bootstrap strata (primary 1,000 reps; sensitivity 200; BRFSS 50).
+- Results preprint DRAFT written (Docs): https://claude.ai/code/artifact/8e74d553-f742-459f-b8ea-c2d2b48ab46a
+  — not for posting until verification, authorship, and [VERIFY] references are resolved.
+
 ## IN PROGRESS
-- Re-evaluation of all CIs with survey-level bootstrap strata (Stage E on the MacBook).
-- Results preprint (Docs artifact, DRAFT): intro, methods, declarations written; results, abstract, discussion after Stage E.
 - Literature review: framework written. Systematic search and screening log still to do.
 
 ## BLOCKED — REQUIRES MERCHANT MATERIALS
