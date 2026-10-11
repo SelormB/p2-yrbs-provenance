@@ -2,7 +2,7 @@
 
 DRAFT — UNVERIFIED. Results sections are templates. Every `{{key}}` is filled from `results/stats.json` by `manuscript/render.py`. The renderer refuses synthetic-mode statistics.
 
-**Selorm Buaka**¹ · Co-authors: PLACEHOLDER (authorship requires discussion before submission)
+**Selorm Buaka**¹
 
 ¹ University of Northern Colorado · othnielbuaka@gmail.com · ORCID PLACEHOLDER
 
@@ -126,7 +126,7 @@ PENDING. To cover:
 - Code: [GitHub URL after release]; archived at [Zenodo DOI after deposit].
 
 ## Author contributions
-CRediT. PLACEHOLDER pending the authorship discussion.
+Selorm Buaka (sole author): conceptualization, methodology, software, formal analysis, writing – original draft.
 
 ## Use of AI tools
 - Software, documentation drafts, and analysis scaffolding were produced with an AI assistant (Claude, Anthropic) under the author's direction.

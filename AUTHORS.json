@@ -5,9 +5,15 @@
       "affiliation": "University of Northern Colorado",
       "email": "othnielbuaka@gmail.com",
       "orcid": "PLACEHOLDER",
-      "credit_roles": ["Conceptualization", "Methodology", "Software", "Formal analysis", "Writing – original draft"]
+      "credit_roles": [
+        "Conceptualization",
+        "Methodology",
+        "Software",
+        "Formal analysis",
+        "Writing \u2013 original draft"
+      ]
     }
   ],
-  "co_authors": "PLACEHOLDER",
-  "authorship_notes": "Dr. William Merchant's authorship REQUIRES DISCUSSION before any submission, given the methodological relationship. Not decided here."
+  "co_authors": [],
+  "authorship_notes": "Sole author: Selorm Buaka (decided by the author 2026-10-10)."
 }

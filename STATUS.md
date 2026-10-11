@@ -73,7 +73,6 @@ Legend:
 - Confirm ORCID 0009-0005-3991-4859 may replace the placeholder in `AUTHORS.json`.
 - Confirm the 4 variable choices in `config/variable_map.yaml` (V3).
 - Indiana BRFSS ACE question (versions 2/3 not downloaded).
-- Discuss Dr. Merchant's authorship.
 
 ## PENDING REAL-DATA RUN
 - Verification items V6, V8, V9 and V12 (V7 checked).
@@ -86,4 +85,4 @@ Legend:
 - GitHub push and Zenodo deposit: guide written (`docs/PUBLISH_GUIDE.md`). Needs your token, or your own push. Release only after verification.
 
 ## VERIFIED
-- (none yet)
+- V11 authorship: Selorm Buaka, sole author (author decision, 2026-10-10).

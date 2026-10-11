@@ -14,6 +14,6 @@ Nothing is published or submitted until every item is checked by Selorm Buaka pe
 | V8 | Spot-check 3 surveys where an item is coded `NA_SITE` against that site's questionnaire | `results/audit/survey_item_missing_fraction.csv` | PENDING REAL-DATA RUN |
 | V9 | Reproduce `S0_primary` on the MacBook from a clean clone and get identical split hashes | `results/splits/manifest.json` | PENDING REAL-DATA RUN |
 | V10 | Every citation confirmed against the source | `docs/literature_review.md` tags | REQUIRES SELORM |
-| V11 | Authorship of Dr. Merchant (and any co-author) discussed and agreed | Outside this repo | REQUIRES SELORM |
+| V11 | Authorship decided | Author | VERIFIED 2026-10-10: Selorm Buaka, sole author |
 | V12 | Manuscript prose revised in the author's own voice | `manuscript/` | PENDING REAL-DATA RUN |
 | V13 | BRFSS 2023 variable names and codes in `config/brfss.yaml` (ACE items, ADDEPEV3, `_STSTR`, `_PSU`, `_LLCPWT`, `_LCPWTV1`, demographics) | 2023 codebook | Checked by Claude 2026-10-10 against USCODE23_LLCP codebook: all names and ACE/ADDEPEV3 codes match. REQUIRES SELORM sign-off |
