@@ -1,6 +1,8 @@
 {
   "mode": "REAL",
   "n": 430736,
+  "version_files": 3,
+  "bootstrap_reps": 1000,
   "events": 88149,
   "module_states_main": [
     "10.0",
@@ -15,6 +17,7 @@
     "51.0"
   ],
   "module_states_version_only": [
+    "24.0",
     "39.0"
   ],
   "weighted_prevalence": [

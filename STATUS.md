@@ -1,6 +1,6 @@
 # STATUS / TODO — Project 2
 
-Updated 2026-10-10.
+Updated 2026-10-11.
 
 Legend:
 - COMPLETE — done.
@@ -49,7 +49,8 @@ Legend:
 - Open checks resolved: S_THR95 = S0 because no item is 95–99.99% missing in any survey; Indiana has no ACE
   responses in the public BRFSS main file despite CDC's module list (flagged).
 
-- CIs re-evaluated with survey-level bootstrap strata (primary 1,000 reps; sensitivity 200; BRFSS 50).
+- CIs re-evaluated with survey-level bootstrap strata.
+- Full-precision run (2026-10-11): every scenario and BRFSS now at 1,000 bootstrap replicates; BRFSS read with questionnaire versions 1–3 (Maryland and Ohio are version-only module states). Preprint Figure 2, its text, and the poster table updated.
 - Results preprint DRAFT written (Docs): https://claude.ai/code/artifact/8e74d553-f742-459f-b8ea-c2d2b48ab46a
   — not for posting until verification, authorship, and [VERIFY] references are resolved.
 
@@ -65,21 +66,19 @@ Legend:
 - `MERCHANT_SP` method (`src/p2prov/methods.py`), RQ5, and the related manuscript text.
 
 ## REQUIRES SELORM
-- Run `bash scripts/run_local.sh` on the MacBook. CDC is not reachable from the build workspace.
 - PH-MissBench YRBS split file (`data/external/phmissbench_yrbs_split.parquet`). Alternatively, confirm that PH-MissBench's YRBS module is not frozen yet; the P2-internal split is then primary.
 - Verification items V1–V5 and V10–V11 (`docs/VERIFICATION.md`).
-- BRFSS outcome choice. Default: ever told depressive disorder; alternate: frequent mental distress.
+- BRFSS outcome choice (run used the default). Default: ever told depressive disorder; alternate: frequent mental distress.
 - UNC cluster account and partition details (`slurm/site.env`).
 - Confirm ORCID 0009-0005-3991-4859 may replace the placeholder in `AUTHORS.json`.
 - Confirm the 4 variable choices in `config/variable_map.yaml` (V3).
-- Indiana BRFSS ACE: checked all public files, no Indiana ACE answers exist (likely not released). Optional: ask CDC BRFSS.
+- Indiana BRFSS ACE: checked all four public files (main + versions 1–3), no Indiana ACE answers exist (likely not released). Optional: ask CDC BRFSS.
 
 ## PENDING REAL-DATA RUN
 - Verification items V6, V8, V9 and V12 (V7 checked).
 - CSTE abstract (after results and the official 2027 call).
 - Seed-repetition runs for model-fitting variance (HPC).
 - Repeat-attempt outcome: not added (test sets already scored; would now be post hoc).
-- Full 1,000-replicate CIs for sensitivity scenarios (HPC).
 
 ## TO BUILD NEXT (no blocker)
 - GitHub push and Zenodo deposit: guide written (`docs/PUBLISH_GUIDE.md`). Needs your token, or your own push. Release only after verification.
