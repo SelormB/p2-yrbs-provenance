@@ -103,16 +103,19 @@ def run(raw: Path, out: Path, synthetic: bool = False, dev: bool = True, df: pd.
     out.mkdir(parents=True, exist_ok=True)
     if df is None:
         df = read_xpt(raw / "LLCP2023.XPT")
-        v1 = read_xpt(raw / "LLCP23V1.XPT") if (raw / "LLCP23V1.XPT").exists() else None
+        versions = [read_xpt(raw / f"LLCP23V{k}.XPT") for k in (1, 2, 3) if (raw / f"LLCP23V{k}.XPT").exists()]
     else:
-        v1 = None
+        versions = []
     items = cfg["ace_items"]
     main_states = module_states(df, items, d["state"])
-    version_states = module_states(v1, items, d["state"]) - main_states if v1 is not None else set()
+    version_states = set()
+    for v in versions:
+        version_states |= module_states(v, items, d["state"])
+    version_states -= main_states
     prov = label_provenance(df, cfg, main_states, version_states)
     prov.apply(lambda c: c.value_counts(normalize=True)).T.to_csv(out / "T_brfss_provenance.csv")
     F, _ = build_frame(df, cfg, prov)
-    summary = {"mode": "SYNTHETIC" if synthetic else "REAL", "n": int(len(F["y"])),
+    summary = {"mode": "SYNTHETIC" if synthetic else "REAL", "n": int(len(F["y"])), "version_files": len(versions), "bootstrap_reps": 50 if dev else 1000,
                "events": int(F["y"].sum()), "module_states_main": sorted(map(str, main_states)),
                "module_states_version_only": sorted(map(str, version_states))}
     e, se, lo, hi = M.weighted_prevalence(F["y"], F["w"], F["meta"]["design_stratum"], F["meta"]["design_psu"])

@@ -26,3 +26,4 @@ Each entry gives the date, the decision, the reason, and whether it was made bef
 | 2026-10-10 | S_THR95 gives results identical to S0 | Checked: no survey had any item 95–99.99% missing; site omission in the release is all-or-nothing, so the two rules label the same cells | finding |
 | 2026-10-10 | BRFSS: Indiana listed by CDC as using the ACE module in 2023, but the public main file has no ACE responses for Indiana (10,993 records); coded NA_STATE. Versions 2 and 3 not downloaded | Data check; REQUIRES SELORM / CDC confirmation | finding |
 | 2026-10-10 | Authorship: Selorm Buaka, sole author | Author decision | — |
+| 2026-10-10 | Indiana BRFSS ACE: no ACE answers for Indiana in the 2023 main file or questionnaire versions 1–3 (10,993 Indiana records, all in the main file); kept as NA_STATE | Checked on all four public files | finding |

@@ -72,7 +72,7 @@ Legend:
 - UNC cluster account and partition details (`slurm/site.env`).
 - Confirm ORCID 0009-0005-3991-4859 may replace the placeholder in `AUTHORS.json`.
 - Confirm the 4 variable choices in `config/variable_map.yaml` (V3).
-- Indiana BRFSS ACE question (versions 2/3 not downloaded).
+- Indiana BRFSS ACE: checked all public files, no Indiana ACE answers exist (likely not released). Optional: ask CDC BRFSS.
 
 ## PENDING REAL-DATA RUN
 - Verification items V6, V8, V9 and V12 (V7 checked).
